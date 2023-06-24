@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="./main.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="../res/index/brand_logo-2_footer.svg" />
+    <title>About</title>
+    <style>
+        .copyright {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #C77BF4 0%, #FF5672 100%);
+            box-shadow: -5px -5px 19px rgb(0 0 0 / 23%);
+            height: 50px;
+            width: 100%;
+            color: #fff;
+            font-size: 15px;
+        }
+        
+        .appbar {
+            zoom: .8;
+            z-index: 2;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background: rgba(0, 0, 0, .12);
+            display: flex;
+            align-items: center
+        }
+        
+        .logo {
+            margin: 0 100px;
+            width: 150px;
+            height: 90px;
+            background: url(./Photos/logo.png);
+            background-repeat: no-repeat;
+            background-size: 150px 90px;
+            cursor: pointer
+        }
+        
+        .nav {
+            margin-left: auto;
+            margin-right: 100px;
+            transition: all .5s
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+            list-style: none;
+            list-style-position: inside
+        }
+        
+        .nav a {
+            text-decoration: none;
+            font-size: 22px;
+            color: rgba(255, 255, 255, .781);
+            font-weight: 300
+        }
+        
+        .nav-icon {
+            display: none;
+        }
+        
+        .banner {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            background: url(https://nrzl4apc.knight-bite.com/main/res/about/banner.webp);
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+        
+        .banner h1 {
+            color: #fff;
+            font-size: 3.8vw;
+            margin-top: 100px;
+            width: 50vw;
+            padding-left: 80px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: nicotineregular;
+        }
+        
+        * {
+            font-family: nunito;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .about-grid {
+            margin: 130px 40px;
+            padding: 0;
+            grid-template-columns: repeat(1,1fr);
+            justify-content: left;
+            justify-items: left;
+        }
+        .about-grid {
+            
+            row-gap: 70px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            align-content: center;
+            padding: 0 100px;
+            column-gap: 40px;
+        }
+        .grid-item:nth-child(1) {
+            margin: 0 0 200px;
+            order: 2;
+        }
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            font-size: 21px;
+            color: #424242;
+        }
+        .grid-item:nth-child(1) img {
+            transform: scale(1);
+        }
+        
+        .grid-item:nth-child(1) img {
+            transform: scale(.7);
+        }
+        .grid-item img {
+            width: 100%;
+            object-fit: cover;
+        }
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+        .grid-item:nth-child(2) {
+            margin: 80px 0;
+            order: 1;
+        }
+        .grid-item:nth-child(3) {
+            order: 4;
+        }
+        .grid-item:nth-child(3) {
+            justify-content: space-evenly;
+        }
+        .grid-item p {
+            margin: 30px 0;
+        }
+        .grid-item:nth-child(4) {
+            order: 3;
+        }
+        .grid-item img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .grid-item:nth-child(n+5) {
+            order: 5;
+        }
+        .grid-item:nth-child(n+5) {
+            order: 5;
+        }
+        .grid-item:nth-child(n+5) {
+            order: 5;
+        }
+        .locations {
+            font-size: 16px;
+            
+        }
+        .locations h1, .follow-us h1 {
+            color: #424242;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .grid-item p {
+            margin: 30px 0;
+        }
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        .locations span {
+    font-size: 20px;
+    color: #424242;
+    font-weight: 900;
+}
+.grid-item:nth-child(n+5) {
+    order: 5;
+}
+.locations h1, .follow-us h1 {
+    color: #424242;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.profile-tags a {
+    width: 30px;
+    margin-right: 20px;
+}
+a:link {
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.profile-tags img {
+    transform: scale(1);
+    margin-right: 0!important;
+}
+.profile-tags img {
+    transition: all .3s ease-out;
+    
+}
+.grid-item img {
+    width: 100%;
+    object-fit: cover;
+}
+ </style>
+
+</head>
+
+<body>
+    <div class="appbar">
+        <a href="/index.html" class="logo">
+        </a>
+        <!-- <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon" /> -->
+        <nav class="nav">
+            <ul>
+                <a href="../index.html">
+                    <li class="link">Home</li>
+                </a>
+                <a href="abouts.html">
+                    <li class="link selected">
+                        About
+                    </li>
+                </a>
+                <a href="menu.html">
+                    <li class="link">Menu</li>
+                </a>
+                <a href="franchise.html">
+                    <li class="link">Franchise</li>
+                </a>
+                <!-- 
+                <li>
+                    <button class="download-btn" onclick="window.location='http:\/\/bit.ly/KnightBite'">Download
+App</button>
+                </li> -->
+            </ul>
+        </nav>
+        <div class="nav-icon">
+            <label for="nav-icon">
+<div class="icon"></div>
+</label>
+        </div>
+    </div>
+
+    <div class="banner">
+
+        <h1>
+            Knight Bite is a cloud kitchen which delivers food to the nocturnals giving equa lemphasis on food,technology and logistics.
+        </h1>
+    </div>
+
+    <div class="about-grid">
+        <div class="grid-item">
+            <img src="../Knigh-bite assignment/about photos/food-strip.webp">
+        </div>
+        <div class="grid-item">
+            Knight Bite started with the idea to serve all the hungry nocturnals who find it really difficult to order late night muchies. KB brought together late night eaters and helped them order delicious meals at their convenience via Knight Bite App and call.
+        </div>
+        <div class="grid-item">
+            <p>
+                Knight Bite is one such concept which was highly successful in adapting to the emerging market.
+            </p>
+            <p>
+                Biters (customers), accepted and loved the KB app that made the ordering process much more easier. In two weeks of the release of the app, it was trending on top food apps and was downloaded by more than 5000 users across Mangalore and Manipal.
+            </p>
+        </div>
+        <div class="grid-item">
+            <img src="../Knigh-bite assignment/about photos/app-menu.webp" />
+        </div>
+        <div class="grid-item">
+            <img src="../Knigh-bite assignment/about photos/burger.webp" />
+        </div>
+        <div class="grid-item">
+            Going forward, our aim is to help and bring smiles in many more faces and cover many more cities across India and around the world.
+        </div>
+        <div class="grid-item locations">
+            <h1>Locations</h1>
+            <p>
+                <span class="location">Bengaluru</span> <span>Hours:</span> 7:00 pm - 4:00 am
+            </p>
+            <p>
+                <span class="location">Mangalore</span> <span>Hours:</span> 7:00 pm - 4:00 am
+            </p>
+            <p>
+                <span class="location">Mysuru</span> <span>Hours:</span> 7:00 pm - 4:00 am
+            </p>
+            <p>
+                <span class="location">Hyderabad</span> <span>Hours:</span> 7:00 pm - 4:00 am
+            </p>
+            <p>
+                <span class="location">Hubli</span> <span>Hours:</span> 7:00 pm - 4:00 am
+            </p>
+            <p>
+                <span class="location">Manipal</span>
+                <span>Hours:</span> 7:00 pm - 4:00 am
+            </p>
+        </div>
+        <div class="grid-item follow-us">
+            <h1>Follow us</h1>
+            <div style="display: flex;" class="profile-tags">
+                <a href="https://www.instagram.com/knight_bite/">
+                    <img src="../Knigh-bite assignment/Photos/instagram.svg" style="margin-right: 40px;" />
+                </a>
+                <a href="https://m.facebook.com/knightbiteIndia/ ">
+                    <img src="../Knigh-bite assignment/Photos/facebook.svg" style="margin-right: 40px;" />
+                </a>
+                <a href="https://mobile.twitter.com/knight_bite">
+                    <img src="../Knigh-bite assignment/Photos/twitter.svg " style="margin-right: 40px;" />
+                </a>
+                <a href="https://lu.linkedin.com/company/knightbite">
+                    <img src="../Knigh-bite assignment/Photos/linkedin.svg " style="margin-right: 40px;" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCbUM8v6bBtX8mcVFazJ9IQw">
+                    <img src="../Knigh-bite assignment/Photos/youtube.svg " style="margin-right: 40px;" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Ⓒ Copyright <span class="year"></span>. Knight Bite Pvt. Ltd. All Rights Reserved</p>
+    </div>
+    <div class="mask" onclick="closeDialog()"></div>
+
+</body>
+
+</html>

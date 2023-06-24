@@ -65,40 +65,36 @@
 
 <body>
     <div class="appbar">
-        <div class="logo">
-        </div>
-        <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon">
+        <a href="/index.html" class="logo">
+        </a>
+        <!-- <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon" /> -->
         <nav class="nav">
             <ul>
-                <li class="link selected">Home
-                    <!-- <div class="indicator"></div> -->
-                </li>
-                <a>
-                    <!-- href="https://knight-bite.com/pages/about.html" -->
-                    <li class="link">About
+                <a href="index.html">
+                    <li class="link">Home</li>
+                </a>
+                <a href="abouts.html">
+                    <li class="link selected">
+                        About
+                        <div class="indicator"></div>
                     </li>
                 </a>
-                <a>
-                    <!-- href="https://knight-bite.com/pages/menu.html" -->
+                <a href="menu.html">
                     <li class="link">Menu</li>
                 </a>
-                <a>
-                    <!-- href="https://knight-bite.com/pages/franchise.html" -->
+                <a href="franchise.html">
                     <li class="link">Franchise</li>
                 </a>
-
-                <li>
-                    <button class="download-btn" onclick="window.location=&#39;http:\/\/bit.ly/KnightBite&#39;">Download
-App</button>
-                </li>
             </ul>
         </nav>
         <div class="nav-icon">
+
             <label for="nav-icon">
 <div class="icon"></div>
 </label>
         </div>
     </div>
+
 
     <div class="content">
         <div class="app-link">

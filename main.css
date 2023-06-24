@@ -150,13 +150,14 @@ input#nav-icon {
     font-weight: 700!important
 }
 
-.indicator {
+
+/*.indicator {
     margin: 5px auto;
     height: 8px;
     width: 8px;
     border-radius: 5px;
     background: #c77bf4
-}
+}*/
 
 .app-link {
     width: 100%;

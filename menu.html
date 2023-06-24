@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            font-family: nunito;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .appbar {
+            zoom: .8;
+            z-index: 2;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background: rgba(0, 0, 0, .12);
+            display: flex;
+            align-items: center
+        }
+        
+        .logo {
+            margin: 0 100px;
+            width: 150px;
+            height: 90px;
+            background: url(./Photos/logo.png);
+            background-repeat: no-repeat;
+            background-size: 150px 90px;
+            cursor: pointer
+        }
+        
+        .nav {
+            margin-left: auto;
+            margin-right: 100px;
+            transition: all .5s
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin: 0 20px;
+            list-style: none;
+            list-style-position: inside
+        }
+        
+        .nav a {
+            text-decoration: none;
+            font-size: 22px;
+            color: rgba(255, 255, 255, .781);
+            font-weight: 300
+        }
+        
+        .nav-icon {
+            display: none;
+        }
+        
+        .copyright {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #C77BF4 0%, #FF5672 100%);
+            box-shadow: -5px -5px 19px rgb(0 0 0 / 23%);
+            height: 50px;
+            width: 100%;
+            color: #fff;
+            font-size: 15px;
+        }
+        
+        .content {
+            height: fit-content;
+            width: 100vw;
+            background: url(https://nrzl4apc.knight-bite.com/main/res/menu/banner-media.webp);
+        }
+        
+        .content {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            background: url(https://nrzl4apc.knight-bite.com/main/res/menu/banner.webp);
+            background-position: center!important;
+            background-size: cover!important;
+            background-repeat: no-repeat!important;
+        }
+        
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 180px);
+            margin: 120px auto;
+            padding: 0;
+            width: fit-content;
+            row-gap: 0;
+            column-gap: 0;
+        }
+        
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        
+        .menu-item img:first-of-type {
+            height: 140px;
+        }
+        
+        .menu-item img {
+            transform: scale(.7);
+        }
+        
+        .menu-item h1 {
+            font-size: 25px;
+        }
+        
+        .menu-item h1 {
+            color: #fff;
+            font-size: 40px;
+            font-family: nicotineregular;
+            margin: 0 0 15px;
+        }
+        
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="appbar">
+        <a href="/index.html" class="logo">
+        </a>
+        <!-- <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon" /> -->
+        <nav class="nav">
+            <ul>
+                <a href="index.html">
+                    <li class="link">Home</li>
+                </a>
+                <a href="abouts.html">
+                    <li class="link selected">
+                        About
+                        <div class="indicator"></div>
+                    </li>
+                </a>
+                <a href="menu.html">
+                    <li class="link">Menu</li>
+                </a>
+                <a href="franchise.html">
+                    <li class="link">Franchise</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="nav-icon">
+
+            <label for="nav-icon">
+<div class="icon"></div>
+</label>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="menu">
+            <div class="menu-item" data-category="0">
+                <img src="./menu photos/burger-icon.png">
+                <h1>Burgers</h1>
+
+            </div>
+            <div class="menu-item" data-category="1">
+                <img src="./menu photos/starters-icon.png">
+                <h1>Fries/Starters</h1>
+
+            </div>
+            <div class="menu-item" data-category="2">
+                <img src="./menu photos/main-course-icon.png">
+                <h1>Main Course</h1>
+
+            </div>
+            <div class="menu-item" data-category="3">
+                <img src="./menu photos/drinks-icon.png">
+                <h1>Drinks</h1>
+
+            </div>
+            <div class="menu-item" data-category="4">
+                <img src="./menu photos/wrap-icon.png">
+                <h1>Wraps</h1>
+
+            </div>
+            <div class="menu-item" data-category="5">
+                <img src="./menu photos/desserts-icon.png">
+                <h1>Desserts</h1>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Ⓒ Copyright <span class="year"></span>. Knight Bite Pvt. Ltd. All Rights Reserved</p>
+    </div>
+
+</body>
+
+</html>
